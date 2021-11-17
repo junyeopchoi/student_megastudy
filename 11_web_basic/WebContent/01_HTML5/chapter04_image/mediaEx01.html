@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>오디오</title>
+</head>
+<body>
+
+	<!-- 
+		
+		1) 오디오 파일의 위치는 src 속성으로 지정한다. 위치 경로지정 방식은 이미지와 동일하다.
+		
+		2) 브라우저별로 차이가 크다. 
+		   
+		   - 브라우저가 해당 오디오를 지정하는지 반드시 확인해야 한다. 여러 가지 파일형식을 동시에 제공하면 된다
+		
+		3) 오디오 속성
+		
+			autoplay : 음악을 자동적으로 재생
+			controls : 오디오 재생을 제어하는 제어기를 표시
+			loop     : 오디오를 반복하여 재생
+			preload  : 사용자가 사용할 생각이 없더라도 오디오를 미리 다운로드한다.
+			src      : 재생할 오디오가 존재하는 URL을 지정한다.
+			volume   : 오디오의 재생 볼륨에서 설정한다.(0.0부터 1.0까지) 
+	
+	-->
+	
+	
+	
+	<h3>기본 모델 예시</h3>
+	<p>
+		<audio src="../multimedia/old_pop.mp3" autoplay controls loop preload="auto"></audio>
+	</p>
+	
+	
+	
+	<h3>source 적용 예시</h3>
+	<p>
+		<audio controls preload="metadata" muted>
+			<source src="../multimedia/old_pop.mp3" type="audio/mp3">	<!-- 위에서부터 파일 형식을 차례대로 검사한다. -->
+			<source src="../multimedia/movie.ogg" type="audio/ogg">
+			<source src="../multimedia/trailer.mp4" type="audio/mp4">
+		</audio>
+	</p>
+	
+
+</body>
+</html>
