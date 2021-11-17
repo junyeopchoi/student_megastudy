@@ -1,0 +1,118 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>가상클래스</title>
+
+<style>
+
+	/*
+	
+		# 가상 클래스
+	
+		- :(콜론)이 붙어 있으면 가상클래스라고 한다.
+		- 클래스가 정의된 것처럼 간주한다.
+		- 자세한 옵션은 필요에 따라 구글링하여 익힌다.
+		
+		    순서에 따른 가상 클래스 예시
+		
+			! index의 시작 번호가 0이 아닌 1부터 시작한다.
+		
+			:first-child :  첫번쩨 요소에 해당 CSS를 적용한다.
+			:last-child :    마지막에 해당 CSS를 적용한다.
+			:nth-child(n) :  n번쩨 요소에 해당 CSS를 적용한다.
+			
+		
+	
+	*/
+	
+	/*	사용예시1	*/
+	li:first-child{color:red;}
+	li:nth-child(2){color:green;}
+	li:nth-child(3){color:gray;}
+	li:nth-child(4){color:gold;}
+	li:last-child{color:magenta;}
+
+	/*	사용예시2	*/
+	tr:first-child{color:blue;}
+	tr:nth-child(3){color:yellow;}
+	tr:nth-child(5){color:pink;}
+	tr:nth-child(7){color:cyan;}
+	tr:last-child{color:darkcyan;}
+	
+	/*	사용예시3	*/
+	a:link{color:gold;}
+	a:visited{color:black;}
+	a:hover{color:pink;}
+	a:active{color:darkcyan;}
+	
+</style>
+</head>
+<body>
+
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+		<li>d</li>
+		<li>e</li>
+	</ul>
+	
+	<hr>
+	
+	<table border="1">
+		<tbody align="center">
+			<tr>
+				<td>정가</td>
+				<td>50,000원</td>
+			</tr>
+			<tr>
+				<td>판매가</td>
+				<td>45,000(10%할인)</td>
+			</tr>
+			<tr>
+				<td>포인트적립</td>
+				<td>3P 적립</td>
+			</tr>
+			<tr>
+				<td>포인트 추가적립</td>
+				<td>만원 이상 구매시 1,000P 추가 적립<br>5만원 이상 구매시 2,000P 추가 적립<br>편의점 배송 이용시 300P 추가 적립</td>
+			</tr>
+			<tr>
+				<td>발행일</td>
+				<td>2021-01-01</td>
+			</tr>
+			<tr>
+				<td>페이지 수</td>
+				<td>350쪽</td>
+			</tr>
+			<tr>
+				<td>ISBN</td>
+				<td>1234567-1234567</td>
+			</tr>
+			<tr>
+				<td>배송료</td>
+				<td>2,000원</td>
+			</tr>
+			<tr>
+				<td>배송안내</td>
+				<td>
+					<strong>[당일배송]</strong> 당일배송 서비스 시작!<br> 
+					<strong>[휴일배송]</strong>휴일에도 배송받는 Bookshop
+				</td>
+			</tr>
+			<tr>
+				<td>도착예정일</td>
+				<td>지금 주문 시 내일 도착 예정</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<hr>
+	
+	<a href="http://www.naver.com" >마우스를 올려보세요</a>
+	
+	
+	
+</body>
+</html>
