@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt</title>
+<script>
+	
+	/*
+	
+		[형식]
+		
+		prompt("안내문자열","기본값");
+		
+		
+		- 기본값은 생략 가능하다.
+		- 기본 데이터 타입은 문자열이다.
+		
+	*/
+	
+	var test = prompt("test : ");
+	
+	document.write(test+" / "+typeof test + "<br>");
+	
+	var hscore = prompt("html score", "0");
+	var cscore = prompt("css score", "0");
+	var jscore = prompt("js score", "0");
+	
+	var total = parseInt(hscore)+parseInt(cscore)+parseInt(jscore);
+	
+	document.write(total+" / "+typeof total);
+
+</script>
+</head>
+<body>
+</body>
+</html>
