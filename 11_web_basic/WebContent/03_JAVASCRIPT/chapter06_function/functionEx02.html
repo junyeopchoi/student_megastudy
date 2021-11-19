@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수의 파라메타</title>
+<script>
+
+	/*
+	
+		자바와 같이 함수의 파라메타를 전달 받을수 있다.
+		함수의 파라메타의 데이터 형식은 선언하지 않고 파라메타 명만 선언하여 사용한다.
+	
+	*/
+	function func1(a){
+		document.write(a);
+	}
+	
+	function func2(a,b){	
+		document.write(a + "," + b);
+	}
+	
+	function func3(a,b,c){	
+		document.write(a + "," + b + "," + c);
+	}
+	
+
+</script>
+</head>
+<body>
+	<input type="button" value="func1" onclick="func1('apple')">
+	<input type="button" value="func2" onclick="func2('apple', 4000)">
+	<input type="button" value="func3" onclick="func3('apple', 4000, 3)">
+</body>
+</html>

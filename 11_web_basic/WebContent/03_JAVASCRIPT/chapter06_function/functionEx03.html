@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수의 생명주기</title>
+<script>
+	
+	var data = "최초데이터";
+	
+	function func1() {
+		data = "func1";
+		var func1data = "함수 1안의 변수";
+		console.log(data);
+		console.log(func1data);
+		//console.log(func2data);
+		console.log("");
+	}
+	
+	function func2() {
+		data = "func2";
+		var func2data = "함수 2안의 변수";
+		console.log(data);
+		//console.log(func1data);
+		console.log(func2data);
+		console.log("");
+	}
+	
+	func1();
+	func2();
+	
+	console.log(data);
+	
+</script>
+</head>
+<body>
+</body>
+</html>

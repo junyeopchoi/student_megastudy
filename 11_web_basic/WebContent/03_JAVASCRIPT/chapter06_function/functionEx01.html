@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 함수</title>
+<script>
+
+	/*
+	
+		- 함수의 역할 및 사용이유는 자바의 메서드와 같다.
+		
+		[ 형식 ]
+		
+		function 함수명(){
+		     
+		}
+	
+	*/
+	
+	function func1() {
+		document.write("function1<br>");
+	}
+	
+	func1();
+	func1();
+	func1();
+	
+	function func2(){
+		alert("function2");
+		func1();
+	}
+	
+</script>
+</head>
+<body>
+	<button onclick="func2()">test</button>
+	
+</body>
+</html>
