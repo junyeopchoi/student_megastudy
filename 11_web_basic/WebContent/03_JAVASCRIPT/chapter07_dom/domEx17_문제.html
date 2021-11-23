@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습예제</title>
+</head>
+<script type="text/javascript">
+	function makeReasonBuy(a) {
+		var target = document.getElementById("target");
+		var inp = document.createElement("input");
+		
+		inp.type = "text";
+		inp.size = 100;
+		inp.placeholder = "이유를 적어주세요";
+		
+		if(a == "etc"){
+			target.appendChild(inp);
+		}
+	}
+</script>
+<body>
+
+	<!-- 
+		
+		radio에서 '기타'가 선택될 경우
+		
+		<input type="text" size="100" placeholder="이유를 적어주세요">
+		
+		요소가 추가되도록 스크립트를 작성해 보시오.
+	
+	
+	 -->
+
+	<fieldset>
+		<p id="target">
+			<label for="browser">구매 이유 : </label>
+			<input type="radio" name="reasonBuy" onclick="makeReasonBuy('quality')"> 품질이 좋다
+			<input type="radio" name="reasonBuy" onclick="makeReasonBuy('costEffect')"> 가성비가 좋다
+			<input type="radio" name="reasonBuy" onclick="makeReasonBuy('etc')"> 기타&emsp;&emsp;&emsp;
+		</p>
+	</fieldset>
+	
+</body>
+</html>
