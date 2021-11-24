@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document.ready</title>
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	//jquery 명시
+	jQuery(document).ready(function() {
+		$("body").css("background","darkblue");
+	});
+	
+	//일반적
+	$(document).ready(function() {
+		$("body").css("background","darkcyan");
+	});
+	
+	//document생략
+	$().ready(function () {
+		$("body").css("background","gold");
+	});
+	
+	//축약
+	$(function () {
+		$("body").css("background","black");
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
