@@ -152,7 +152,6 @@ SELECT * FROM MEMBER;
       이후 update문 및 delete문 사용 가능
 
 */
-	
 /*
 
 	[ 레코드 수정 형식 ]
@@ -173,6 +172,14 @@ SELECT * FROM MEMBER;
 */
 
 
+	
+    UPDATE MEMBER SET WEIGHT = 90.2 ,HEIGHT = (HEIGHT+1) WHERE NUM = 1;
+    
+    SELECT * FROM MEMBER;
+    
+    SELECT * FROM MEMBER WHERE NUM = 1;
+    
+    
   
 /*
 
@@ -190,6 +197,12 @@ SELECT * FROM MEMBER;
 
 */
 
+DELETE FROM MEMBER WHERE NUM = 1;
+
+COMMIT;
+
+SELECT * FROM MEMBER;
+
 
 /*
 
@@ -203,7 +216,9 @@ SELECT * FROM MEMBER;
 
     # rollback : 이전 커밋시점으로 회귀한다.
 
-*/	
+*/
+
+	show variables like 'autocommit%'; /*AUTOCOMMIT 확인*/
 
 /*
 			
@@ -212,7 +227,7 @@ SELECT * FROM MEMBER;
 
 */
 
-	
+	DROP TABLE MEMBER;
 
 /*
 	
@@ -222,7 +237,7 @@ SELECT * FROM MEMBER;
 		EX) DROP DATABASE TEST_DB;
 */
 
-
+	DROP DATABASE TEST_DB;
 
 
 /*	
@@ -234,3 +249,11 @@ SELECT * FROM MEMBER;
 	 3) 쿼리 정렬 : CTRL + B
          
 */
+	USE BOOKSHOP;
+
+	SELECT * FROM BOOK;
+    
+SELECT 
+    *
+FROM
+    BOOK;

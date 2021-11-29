@@ -165,4 +165,51 @@ INSERT INTO BOOK VALUES(12, '초등학생이 알아야할 숫자', 22000, 0, '�
   
   SELECT * FROM BOOK;
   
-  
+   
+
+/*  
+   2-8) 데이터 수정하기
+		2-8-1) '나미야 잡화점의 기적' 의 할인률을 5로 변경하기.
+		2-8-2) '인간 실격'의 재고를 0으로 변경하기.
+		2-8-3) 할인률이 20이 넘은 데이터들의 할인률을 10으로 변경하기.
+*/	
+ 
+SELECT 
+    *
+FROM
+    BOOK;
+ 
+UPDATE BOOK 
+SET 
+    DISCOUNT_RATE = 5
+WHERE
+    BOOK_TITLE = '나미야 잡화점의 기적';
+    
+UPDATE BOOK SET BOOK_COUNT = 0 WHERE BOOK_TITLE = '인간 실격';
+
+UPDATE BOOK SET DISCOUNT_RATE = 10 WHERE DISCOUNT_RATE >= 20;
+
+SELECT * FROM BOOK;
+ 
+ /*
+    2-9) 데이터 삭제하기
+		출판일이 2015년 이전의 데이터를 삭제하기
+*/        
+ 
+ DELETE FROM BOOK WHERE PUBLISHING_DATE <= '2015-01-01';
+ 
+ SELECT * FROM BOOK;
+ 
+ /*
+	2-10) BOOK테이블 삭제하기
+ */
+ 
+ DROP TABLE BOOK;
+ 
+ /*   
+    2-11) BOOKSHOP데이터 베이스 삭제하기
+    
+*/  
+
+DROP DATABASE bookshop;
+
